@@ -14,8 +14,8 @@ export class SearchComponent implements OnInit {
 
   addToDo(): void {
     // this.dataServices.addTodo(this.ToDo);
-    console.log(this.ToDoTitle)    
-     console.log(this.ToDo) 
+    // console.log(this.ToDoTitle)    
+    //  console.log(this.ToDo) 
     
   }
   ngOnInit() {
