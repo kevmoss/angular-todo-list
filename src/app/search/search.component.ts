@@ -8,14 +8,14 @@ import { Todo } from '../todo';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  ToDoTitle: String;
-  Todo: Todo;
+  // ToDoTitle: String;
+  Todo: String;
   constructor( private dataServices: TodoDataService,) { }
 
   addToDo(): void {
-    // this.dataServices.addTodo(this.ToDo);
+    this.dataServices.addTodo(this.Todo);
     // console.log(this.ToDoTitle)    
-    //  console.log(this.ToDo) 
+     console.log(this.Todo) 
     
   }
   ngOnInit() {

@@ -4,19 +4,25 @@ import {Todo} from './todo';
 @Injectable()
 export class TodoDataService {
 
-  lastId: number = 0;
+  lastId: number = 1;
   todos: Todo[] = [];
 
   constructor() {
   }
 
   // Simulate POST /todos
-  addTodo(todo: Todo): TodoDataService {
-    if (!todo.id) {
-      todo.id = ++this.lastId;
+  addTodo(todo: String): TodoDataService {
+    var ToDoObj = {
+      title: todo, 
+      id: this.lastId,
+      complete: false
     }
-    console.log('added' )
-    this.todos.push(todo);
+    this.lastId++;
+    // if (!todo.id) {
+    //   todo.id = ++this.lastId;
+    // }
+    this.todos.push(ToDoObj);
+    console.log('added',this.todos )    
     return this;
   }
 
