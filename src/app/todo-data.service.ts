@@ -15,6 +15,7 @@ export class TodoDataService {
     if (!todo.id) {
       todo.id = ++this.lastId;
     }
+    console.log('added' )
     this.todos.push(todo);
     return this;
   }

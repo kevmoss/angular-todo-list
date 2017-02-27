@@ -1,0 +1,20 @@
+.material-icons{
+    float: right;
+    cursor: pointer
+}
+.material-icons.left:hover{
+    background-color: white;
+    color: #8ec06c;
+    border-radius: 6px;
+}
+.material-icons.right:hover{
+    background-color: white;
+    color: #ed1b2e;
+    border-radius: 10px;
+}
+.collection-item{
+    font-size: 1.5em
+}
+.collection-item:hover{
+    background-color: #e0e0e0
+}
