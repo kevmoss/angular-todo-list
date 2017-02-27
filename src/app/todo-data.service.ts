@@ -18,11 +18,8 @@ export class TodoDataService {
       complete: false
     }
     this.lastId++;
-    // if (!todo.id) {
-    //   todo.id = ++this.lastId;
-    // }
     this.todos.push(ToDoObj);
-    console.log('added',this.todos )    
+    // console.log(this.todos)    
     return this;
   }
 

@@ -1,13 +1,10 @@
-<ul class="collection">
-  <li class="collection-item center"><i class="material-icons left">done</i>Alvin<i class="material-icons right">clear</i></li>
-  <li class="collection-item center"><i class="material-icons left">done</i>Alvin<i class="material-icons right">clear</i></li>
-  <li class="collection-item center"><i class="material-icons left">done</i>Alvin<i class="material-icons right">clear</i></li>
-  <li class="collection-item center"><i class="material-icons left">done</i>Alvin<i class="material-icons right">clear</i></li>
+<ul class="collection todos">
+
+   <li *ngFor="let todo of todos">
+    <span class="badge">{{todo.id}}</span>
+    <span>{{todo.title}}</span>
+  </li>
+
+  <li class="collection-item center"><i class="material-icons left">done</i>Task1<i class="material-icons right">clear</i></li>
 </ul>
  
-<!--
-  <div class="collection">
-    <a href="#!" class="collection-item center"><span class="badge">1</span>Alan</a>
-    <a href="#!" class="collection-item center"><span class="new badge">4</span>Alan</a>
-  </div>
-           -->
