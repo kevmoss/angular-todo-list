@@ -1,6 +1,7 @@
 .material-icons{
     float: right;
-    cursor: pointer
+    cursor: pointer;
+    color:rgba(0,0,0,0.87);
 }
 .material-icons.left:hover{
     background-color: white;
@@ -17,4 +18,12 @@
 }
 .collection-item:hover{
     background-color: #e0e0e0
+}
+.done{
+     text-decoration: line-through;
+     color: grey;
+     background-color: whitesmoke
+}
+.tick{
+    color: green
 }

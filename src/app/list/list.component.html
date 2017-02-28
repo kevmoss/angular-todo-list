@@ -1,7 +1,9 @@
 <section class="main" *ngIf="todos.length > 0">
   <ul class="collection">
-    <li *ngFor="let todo of todos" class="collection-item center">
-      <i class="material-icons left">done</i>{{todo.title}}<i class="material-icons right">clear</i>
+    <li *ngFor="let todo of todos" class="collection-item center " [class.done]="todo.complete" >
+      <i class="material-icons left" [class.tick]="todo.complete" (click)="toggleCompleted(todo)">done</i>
+        {{todo.title}}
+      <i class="material-icons right" (click)="removeTodo(todo)">clear</i>
     </li>
   </ul>
 </section>

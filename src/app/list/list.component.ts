@@ -17,9 +17,16 @@ export class ListComponent implements OnInit {
   get todos() {
     return this.dataServices.getAllTodos();
   }
-  // removeTodo(todo) {
-  //   this.todoDataService.deleteTodoById(todo.id);
-  // }
+  removeTodo(todo) {
+    this.dataServices.deleteTodoById(todo.id);
+  }
+  toggleCompleted(todo){
+    this.dataServices.toggleTodoComplete(todo)
+    console.log(this.dataServices.getTodoById(todo.id).complete)
+  }
+  complete(){
+    return 'woprkkkkks'
+  }
 
 
 }
