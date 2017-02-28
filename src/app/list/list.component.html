@@ -1,6 +1,6 @@
 <section class="main" *ngIf="todos.length > 0">
   <ul class="collection">
-    <li *ngFor="let todo of todos" class="collection-item center " [class.done]="todo.complete" >
+    <li *ngFor="let todo of todos" class="collection-item " [class.done]="todo.complete" >
       <i class="material-icons left" [class.tick]="todo.complete" (click)="toggleCompleted(todo)">done</i>
         {{todo.title}}
       <i class="material-icons right" (click)="removeTodo(todo)">clear</i>

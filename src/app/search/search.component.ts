@@ -12,7 +12,9 @@ export class SearchComponent implements OnInit {
   constructor( private dataServices: TodoDataService) { }
 
   addToDo(): void {
-    this.dataServices.addTodo(this.Todo);
+    if(this.Todo!){
+       this.dataServices.addTodo(this.Todo);
+    }
   }
   ngOnInit() {
   }

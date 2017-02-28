@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-// import { Todo } from '../todo';
 import { TodoDataService } from '../todo-data.service';
 
 @Component({
@@ -22,11 +21,6 @@ export class ListComponent implements OnInit {
   }
   toggleCompleted(todo){
     this.dataServices.toggleTodoComplete(todo)
-    console.log(this.dataServices.getTodoById(todo.id).complete)
   }
-  complete(){
-    return 'woprkkkkks'
-  }
-
 
 }
