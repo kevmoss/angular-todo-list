@@ -1,10 +1,7 @@
-<ul class="collection todos">
-
-   <li *ngFor="let todo of todos">
-    <span class="badge">{{todo.id}}</span>
-    <span>{{todo.title}}</span>
-  </li>
-
-  <li class="collection-item center"><i class="material-icons left">done</i>Task1<i class="material-icons right">clear</i></li>
-</ul>
- 
+<section class="main" *ngIf="todos.length > 0">
+  <ul class="collection">
+    <li *ngFor="let todo of todos" class="collection-item center">
+      <i class="material-icons left">done</i>{{todo.title}}<i class="material-icons right">clear</i>
+    </li>
+  </ul>
+</section>

@@ -1,4 +1,3 @@
 
-<input placeholder="Placeholder" [(ngModel)]="Todo" id="name" type="text" class="validate">
+<input placeholder="Add your ToDo's" [(ngModel)]="Todo" autofocus="" id="name" type="text" class="validate" (keyup.enter)="addToDo()">
 <label for="name"></label>
-<a class="waves-effect waves-light btn" (click)="addToDo()">button</a>

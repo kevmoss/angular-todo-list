@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Todo } from '../todo';
+import { Component, OnInit, Input } from '@angular/core';
+// import { Todo } from '../todo';
 import { TodoDataService } from '../todo-data.service';
 
 @Component({
@@ -9,12 +9,17 @@ import { TodoDataService } from '../todo-data.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  todos: Todo[];
   constructor(private dataServices: TodoDataService) { }
 
-  
-  ngOnInit(): void {
-    console.log(this.dataServices.getAllTodos())
+  ngOnInit(): void{
+    this.dataServices.getAllTodos();
   }
+  get todos() {
+    return this.dataServices.getAllTodos();
+  }
+  // removeTodo(todo) {
+  //   this.todoDataService.deleteTodoById(todo.id);
+  // }
+
 
 }
